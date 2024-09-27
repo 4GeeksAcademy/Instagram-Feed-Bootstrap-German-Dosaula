@@ -15,9 +15,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Recorta las imágenes si es necesario para que llenen el espacio */
             aspect-ratio: 1 / 1;
-            /* Mantiene un formato cuadrado */
         }
 
         .container-fluid {
@@ -27,107 +25,191 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Logo" width="40" height="40"
                     class="d-inline-block align-text-top">
                 Instagram
             </a>
-            <div class="ms-auto">
-                <div class="collapse navbar-collapse gap-3" id="navbarNavDropdown">
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
-                        Create a new post
+            <div class="ms-auto d-flex flex-md-row align-items-center gap-3">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Create a new post
+                </button>
+                <div class="dropdown">
+                    <button class="btn btn-light" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
                     </button>
-                    <ul class="navbar-nav">
-                        <div class="dropdown">
-                            <button class="btn btn-light" type="button" id="dropdownMenuButton"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-gear"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Accesibility</a></li>
-                                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                                <li>
-                                    <hr class="dropdown-divider bg-secondary">
-                                </li>
-                                <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-                            </ul>
-                        </div>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li>
+                            <hr class="dropdown-divider bg-secondary">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-    <ul class="nav nav-tabs justify-content-center mt-3">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" id="3grid"><i
-                    class="fa-solid fa-calendar-days"></i></a>
+    <ul class="nav nav-tabs justify-content-center mt-3" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                    class="fa-solid fa-calendar-days"></i></button>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#" id="singlegrid"><i class="fa-sharp fa-solid fa-square"></i></a>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                    class="fa-sharp fa-solid fa-square"></i></button>
         </li>
     </ul>
-    <div id="3grid">
-        <div class="container-fluid"> <!-- container-fluid para ocupar todo el ancho -->
-            <div class="row mt-1"> <!-- g-0 elimina los espacios entre columnas -->
-                <!-- Columna 1 -->
-                <div class="col-12 col-md-4">
-                    <img src="https://via.placeholder.com/500" alt="Foto 1" class="grid-img">
-                </div>
-                <!-- Columna 2 -->
-                <div class="col-12 col-md-4">
-                    <img src="https://via.placeholder.com/500" alt="Foto 2" class="grid-img">
-                </div>
-                <!-- Columna 3 -->
-                <div class="col-12 col-md-4">
-                    <img src="https://via.placeholder.com/500" alt="Foto 3" class="grid-img">
-                </div>
-            </div>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <div id="3grid">
+                <div class="container-fluid">
+                    <div class="row mt-1">
+                        <!-- Columna 1 -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <img src="https://media.admagazine.com/photos/65a0150aa3dce2836c2d8566/16:9/w_2560%2Cc_limit/arquitectura-japonesa.jpg"
+                                alt="Foto 1" class="grid-img">
+                        </div>
+                        <!-- Columna 2 -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFwYW58ZW58MHx8MHx8fDA%3D" alt="Foto 2" class="grid-img">
+                        </div>
+                        <!-- Columna 3 -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <img src="https://www.axa-im.es/sites/spain/files/styles/standard_banner_xs/public/header/axa-im-how-find-us-japan-g1284581217-saturated.jpg?h=3e939486&itok=omZZ7IuZ" alt="Foto 3" class="grid-img">
+                        </div>
+                    </div>
 
-            <div class="row mt-1"> <!-- Nueva fila -->
-                <!-- Columna 4 -->
-                <div class="col-12 col-md-4">
-                    <img src="https://via.placeholder.com/500" alt="Foto 4" class="grid-img">
-                </div>
-                <!-- Columna 5 -->
-                <div class="col-12 col-md-4">
-                    <img src="https://via.placeholder.com/500" alt="Foto 5" class="grid-img">
-                </div>
-                <!-- Columna 6 -->
-                <div class="col-12 col-md-4">
-                    <img src="https://via.placeholder.com/500" alt="Foto 6" class="grid-img">
-                </div>
-            </div>
-
-            <!-- Añade más filas de 3 columnas según sea necesario -->
-        </div>
-    </div>
-    <div id="singlegrid">
-        <div class="container-fluid text-center mt-3 d-none"> <!-- Centrar el contenido -->
-            <div class="row"> <!-- Fila de imágenes -->
-                <div class="col-12"> <!-- Columna que ocupa el 100% -->
-                    <img src="https://via.placeholder.com/500" alt="Foto 1" class="grid-img mb-3"> <!-- Espaciado inferior -->
-                </div>
-                <div class="col-12">
-                    <img src="https://via.placeholder.com/500" alt="Foto 2" class="grid-img mb-3">
-                </div>
-                <div class="col-12">
-                    <img src="https://via.placeholder.com/500" alt="Foto 3" class="grid-img mb-3">
-                </div>
-                <div class="col-12">
-                    <img src="https://via.placeholder.com/500" alt="Foto 4" class="grid-img mb-3">
-                </div>
-                <div class="col-12">
-                    <img src="https://via.placeholder.com/500" alt="Foto 5" class="grid-img mb-3">
-                </div>
-                <div class="col-12">
-                    <img src="https://via.placeholder.com/500" alt="Foto 6" class="grid-img mb-3">
+                    <div class="row mt-1">
+                        <!-- Columna 4 -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <img src="https://media.timeout.com/images/105240237/image.jpg" alt="Foto 4" class="grid-img">
+                        </div>
+                        <!-- Columna 5 -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <img src="https://images.squarespace-cdn.com/content/v1/654fbdcd4c023d4139c37867/c88832f0-1180-4ae9-b629-87b6985f5582/JAPANFes_042024-116a.jpg?format=2500w" alt="Foto 5" class="grid-img">
+                        </div>
+                        <!-- Columna 6 -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRif2zAAPQZZH6hMkPF2UQQhWhh2mNtteoyMw&s" alt="Foto 6" class="grid-img">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div id="singlegrid">
+                <div class="container-fluid text-center mt-3">
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="card card-custom mx-auto mt-4 col-lg-6 col-xl-6 col-xxl-6 col-md-11 col-sm-11">
+                            <div class="d-flex justify-content-between align-items-center mt-1 mb-1">
+                                <h5 class="card-title p-2">Mount Fuji</h5>
+                                <div class="date-posted p-2">08/24</div>
+                            </div>
+                            <img src="https://media.admagazine.com/photos/65a0150aa3dce2836c2d8566/16:9/w_2560%2Cc_limit/arquitectura-japonesa.jpg"
+                                class="card-img-top" alt="Foto del Monte Fuji">
+                            <div class="card-body">
+                                <p class="text-start">
+                                    <strong>314 Likes</strong>
+                                </p>
+                                <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="card card-custom mx-auto mt-4 col-lg-6 col-xl-6 col-xxl-6 col-md-11 col-sm-11">
+                            <div class="d-flex justify-content-between align-items-center mt-1 mb-1">
+                                <h5 class="card-title p-2">Japan River</h5>
+                                <div class="date-posted p-2">07/24</div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFwYW58ZW58MHx8MHx8fDA%3D"
+                                class="card-img-top" alt="Foto del rio">
+                            <div class="card-body">
+                                <p class="text-start">
+                                    <strong>114 Likes</strong>
+                                </p>
+                                <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="card card-custom mx-auto mt-4 col-lg-6 col-xl-6 col-xxl-6 col-md-11 col-sm-11">
+                            <div class="d-flex justify-content-between align-items-center mt-1 mb-1">
+                                <h5 class="card-title p-2">Japan City</h5>
+                                <div class="date-posted p-2">06/24</div>
+                            </div>
+                            <img src="https://www.axa-im.es/sites/spain/files/styles/standard_banner_xs/public/header/axa-im-how-find-us-japan-g1284581217-saturated.jpg?h=3e939486&itok=omZZ7IuZ"
+                                class="card-img-top" alt="Foto de una ciudad japonesa">
+                            <div class="card-body">
+                                <p class="text-start">
+                                    <strong>999 Likes</strong>
+                                </p>
+                                <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="card card-custom mx-auto mt-4 col-lg-6 col-xl-6 col-xxl-6 col-md-11 col-sm-11">
+                            <div class="d-flex justify-content-between align-items-center mt-1 mb-1">
+                                <h5 class="card-title p-2">Temple</h5>
+                                <div class="date-posted p-2">05/24</div>
+                            </div>
+                            <img src="https://media.timeout.com/images/105240237/image.jpg"
+                                class="card-img-top" alt="Foto del Monte Fuji">
+                            <div class="card-body">
+                                <p class="text-start">
+                                    <strong>245 Likes</strong>
+                                </p>
+                                <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="card card-custom mx-auto mt-4 col-lg-6 col-xl-6 col-xxl-6 col-md-11 col-sm-11">
+                            <div class="d-flex justify-content-between align-items-center mt-1 mb-1">
+                                <h5 class="card-title p-2">Japan Fest</h5>
+                                <div class="date-posted p-2">04/24</div>
+                            </div>
+                            <img src="https://images.squarespace-cdn.com/content/v1/654fbdcd4c023d4139c37867/c88832f0-1180-4ae9-b629-87b6985f5582/JAPANFes_042024-116a.jpg?format=2500w"
+                                class="card-img-top" alt="Foto del Monte Fuji">
+                            <div class="card-body">
+                                <p class="text-start">
+                                    <strong>76 Likes</strong>
+                                </p>
+                                <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="card card-custom mx-auto mt-4 col-lg-6 col-xl-6 col-xxl-6 col-md-11 col-sm-11">
+                            <div class="d-flex justify-content-between align-items-center mt-1 mb-1">
+                                <h5 class="card-title p-2">Japan Lake</h5>
+                                <div class="date-posted p-2">01/24</div>
+                            </div>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRif2zAAPQZZH6hMkPF2UQQhWhh2mNtteoyMw&s"
+                                class="card-img-top" alt="Foto del Monte Fuji">
+                            <div class="card-body">
+                                <p class="text-start">
+                                    <strong>678 Likes</strong>
+                                </p>
+                                <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <!--modal-->
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
