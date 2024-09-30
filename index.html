@@ -9,19 +9,6 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        .grid-img {
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            aspect-ratio: 1 / 1;
-        }
-
-        .container-fluid {
-            padding: 1;
-        }
-    </style>
 </head>
 
 <body>
@@ -29,11 +16,10 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Logo" width="40" height="40"
-                    class="d-inline-block align-text-top">
-                Instagram
-            </a>
+                    class="d-inline-block align-text-top"></a>
+            <h3>Instagram</h3>
             <div class="ms-auto d-flex flex-md-row align-items-center gap-3">
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+                <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">
                     Create a new post
                 </button>
                 <div class="dropdown">
@@ -56,55 +42,64 @@
     </nav>
     <ul class="nav nav-tabs justify-content-center mt-3" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
-                    class="fa-solid fa-calendar-days"></i></button>
+            <button class="nav-link active" id="3-grid" data-bs-toggle="tab" data-bs-target="#3grid"
+                type="button" role="tab" aria-controls="3grid" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+            <button class="nav-link" id="1-grid" data-bs-toggle="tab" data-bs-target="#1grid"
+                type="button" role="tab" aria-controls="1grid" aria-selected="false"><i
                     class="fa-sharp fa-solid fa-square"></i></button>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+        <div class="tab-pane fade show active" id="3grid" role="tabpanel" aria-labelledby="3-grid"
             tabindex="0">
             <div id="3grid">
                 <div class="container-fluid">
-                    <div class="row mt-1">
-                        <!-- Columna 1 -->
-                        <div class="col-12 col-sm-6 col-md-4">
+                    <div class="row mt-1 m-3 pt-2">
+                        <div class="col-12 col-md-4 mb-2">
                             <img src="https://media.admagazine.com/photos/65a0150aa3dce2836c2d8566/16:9/w_2560%2Cc_limit/arquitectura-japonesa.jpg"
-                                alt="Foto 1" class="grid-img">
+                                alt="Foto 1" class="grid-img img-fluid">
                         </div>
-                        <!-- Columna 2 -->
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFwYW58ZW58MHx8MHx8fDA%3D" alt="Foto 2" class="grid-img">
+                        <div class="col-12 col-md-4 mb-2">
+                            <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFwYW58ZW58MHx8MHx8fDA%3D" 
+                            alt="Foto 2" class="grid-img img-fluid">
                         </div>
-                        <!-- Columna 3 -->
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <img src="https://www.axa-im.es/sites/spain/files/styles/standard_banner_xs/public/header/axa-im-how-find-us-japan-g1284581217-saturated.jpg?h=3e939486&itok=omZZ7IuZ" alt="Foto 3" class="grid-img">
+                        <div class="col-12 col-md-4 mb-2">
+                            <img src="https://www.axa-im.es/sites/spain/files/styles/standard_banner_xs/public/header/axa-im-how-find-us-japan-g1284581217-saturated.jpg?h=3e939486&itok=omZZ7IuZ" 
+                            alt="Foto 3" class="grid-img img-fluid">
                         </div>
                     </div>
-
-                    <div class="row mt-1">
-                        <!-- Columna 4 -->
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <img src="https://media.timeout.com/images/105240237/image.jpg" alt="Foto 4" class="grid-img">
+                    <div class="row m-3">
+                        <div class="col-12 col-md-4 mb-2">
+                            <img src="https://media.timeout.com/images/105240237/image.jpg" alt="Foto 4" class="grid-img img-fluid">
                         </div>
-                        <!-- Columna 5 -->
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <img src="https://images.squarespace-cdn.com/content/v1/654fbdcd4c023d4139c37867/c88832f0-1180-4ae9-b629-87b6985f5582/JAPANFes_042024-116a.jpg?format=2500w" alt="Foto 5" class="grid-img">
+                        <div class="col-12 col-md-4 mb-2">
+                            <img src="https://images.squarespace-cdn.com/content/v1/654fbdcd4c023d4139c37867/c88832f0-1180-4ae9-b629-87b6985f5582/JAPANFes_042024-116a.jpg?format=2500w" 
+                            alt="Foto 5" class="grid-img img-fluid">
                         </div>
-                        <!-- Columna 6 -->
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRif2zAAPQZZH6hMkPF2UQQhWhh2mNtteoyMw&s" alt="Foto 6" class="grid-img">
+                        <div class="col-12 col-md-4 mb-2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRif2zAAPQZZH6hMkPF2UQQhWhh2mNtteoyMw&s" 
+                            alt="Foto 6" class="grid-img img-fluid">
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-12 col-md-4 mb-2">
+                            <img src="https://www.neverendingvoyage.com/wp-content/uploads/2019/12/planning-japan-trip.jpg" alt="Foto 7" class="grid-img img-fluid">
+                        </div>
+                        <div class="col-12 col-md-4 mb-2">
+                            <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/490000/490105-kofu.jpg" 
+                            alt="Foto 8" class="grid-img img-fluid">
+                        </div>
+                        <div class="col-12 col-md-4 mb-2">
+                            <img src="https://www.japantimes.co.jp/uploads/imported_images/uploads/2022/12/np_file_197218.jpeg" 
+                            alt="Foto 9" class="grid-img img-fluid">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="tab-pane fade" id="1grid" role="tabpanel" aria-labelledby="1-tab" tabindex="0">
             <div id="singlegrid">
                 <div class="container-fluid text-center mt-3">
                     <div class="row d-flex align-items-center justify-content-center">
@@ -198,6 +193,54 @@
                             <div class="card-body">
                                 <p class="text-start">
                                     <strong>678 Likes</strong>
+                                </p>
+                                <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="card card-custom mx-auto mt-4 col-lg-6 col-xl-6 col-xxl-6 col-md-11 col-sm-11">
+                            <div class="d-flex justify-content-between align-items-center mt-1 mb-1">
+                                <h5 class="card-title p-2">Japan Structure</h5>
+                                <div class="date-posted p-2">12/23</div>
+                            </div>
+                            <img src="https://www.neverendingvoyage.com/wp-content/uploads/2019/12/planning-japan-trip.jpg"
+                                class="card-img-top" alt="Foto del Monte Fuji">
+                            <div class="card-body">
+                                <p class="text-start">
+                                    <strong>156 Likes</strong>
+                                </p>
+                                <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="card card-custom mx-auto mt-4 col-lg-6 col-xl-6 col-xxl-6 col-md-11 col-sm-11">
+                            <div class="d-flex justify-content-between align-items-center mt-1 mb-1">
+                                <h5 class="card-title p-2">Japan Beach</h5>
+                                <div class="date-posted p-2">23/23</div>
+                            </div>
+                            <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/490000/490105-kofu.jpg"
+                                class="card-img-top" alt="Foto del Monte Fuji">
+                            <div class="card-body">
+                                <p class="text-start">
+                                    <strong>68 Likes</strong>
+                                </p>
+                                <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="card card-custom mx-auto mt-4 col-lg-6 col-xl-6 col-xxl-6 col-md-11 col-sm-11 mb-3">
+                            <div class="d-flex justify-content-between align-items-center mt-1 mb-1">
+                                <h5 class="card-title p-2">My Travell to Japan</h5>
+                                <div class="date-posted p-2">06/23</div>
+                            </div>
+                            <img src="https://www.japantimes.co.jp/uploads/imported_images/uploads/2022/12/np_file_197218.jpeg"
+                                class="card-img-top" alt="Foto del Monte Fuji">
+                            <div class="card-body">
+                                <p class="text-start">
+                                    <strong>863 Likes</strong>
                                 </p>
                                 <p class="card-text text-start">This is an example of a very good photo that you can post on Instagram.</p>
                             </div>
